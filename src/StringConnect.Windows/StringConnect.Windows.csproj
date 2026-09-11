@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>StringConnect.Windows</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <!-- UI Automation 클라이언트 API(System.Windows.Automation)는 Windows Desktop
+         타기팅 팩의 일부이지만 자동으로 참조되지 않으므로 명시적으로 추가한다. -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../StringConnect.Core/StringConnect.Core.csproj" />
+  </ItemGroup>
+
+</Project>
